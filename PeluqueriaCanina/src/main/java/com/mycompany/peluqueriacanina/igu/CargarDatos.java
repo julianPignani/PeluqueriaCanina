@@ -97,6 +97,7 @@ public class CargarDatos extends javax.swing.JFrame {
         txtNombreDuenio.setBackground(new java.awt.Color(0, 0, 0));
         txtNombreDuenio.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
+        txtObservaciones.setBackground(new java.awt.Color(0, 0, 0));
         txtObservaciones.setColumns(20);
         txtObservaciones.setRows(5);
         jScrollPane1.setViewportView(txtObservaciones);
