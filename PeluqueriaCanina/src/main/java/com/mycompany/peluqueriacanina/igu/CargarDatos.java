@@ -82,39 +82,61 @@ public class CargarDatos extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Observaciones:");
 
-        txtNombre.setBackground(new java.awt.Color(0, 0, 0));
+        txtNombre.setBackground(new java.awt.Color(255, 255, 255));
         txtNombre.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        txtNombre.setForeground(new java.awt.Color(0, 0, 0));
+        txtNombre.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        txtRaza.setBackground(new java.awt.Color(0, 0, 0));
+        txtRaza.setBackground(new java.awt.Color(255, 255, 255));
         txtRaza.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        txtRaza.setForeground(new java.awt.Color(0, 0, 0));
+        txtRaza.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        txtColor.setBackground(new java.awt.Color(0, 0, 0));
+        txtColor.setBackground(new java.awt.Color(255, 255, 255));
         txtColor.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        txtColor.setForeground(new java.awt.Color(0, 0, 0));
+        txtColor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        txtCelDuenio.setBackground(new java.awt.Color(0, 0, 0));
+        txtCelDuenio.setBackground(new java.awt.Color(255, 255, 255));
         txtCelDuenio.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        txtCelDuenio.setForeground(new java.awt.Color(0, 0, 0));
+        txtCelDuenio.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        txtNombreDuenio.setBackground(new java.awt.Color(0, 0, 0));
+        txtNombreDuenio.setBackground(new java.awt.Color(255, 255, 255));
         txtNombreDuenio.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        txtNombreDuenio.setForeground(new java.awt.Color(0, 0, 0));
+        txtNombreDuenio.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        txtObservaciones.setBackground(new java.awt.Color(0, 0, 0));
+        txtObservaciones.setBackground(new java.awt.Color(255, 255, 255));
         txtObservaciones.setColumns(20);
+        txtObservaciones.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        txtObservaciones.setForeground(new java.awt.Color(0, 0, 0));
         txtObservaciones.setRows(5);
+        txtObservaciones.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane1.setViewportView(txtObservaciones);
 
-        cmbAlergico.setBackground(new java.awt.Color(0, 0, 0));
+        cmbAlergico.setBackground(new java.awt.Color(255, 255, 255));
         cmbAlergico.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        cmbAlergico.setForeground(new java.awt.Color(0, 0, 0));
         cmbAlergico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "SI", "NO" }));
+        cmbAlergico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        cmbAEspecial.setBackground(new java.awt.Color(0, 0, 0));
+        cmbAEspecial.setBackground(new java.awt.Color(255, 255, 255));
         cmbAEspecial.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        cmbAEspecial.setForeground(new java.awt.Color(0, 0, 0));
         cmbAEspecial.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "SI", "NO" }));
+        cmbAEspecial.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnLimpiar.setBackground(new java.awt.Color(255, 0, 0));
         btnLimpiar.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         btnLimpiar.setIcon(new javax.swing.ImageIcon("D:\\CURSO\\Peluqueria_Canina\\Limpiar1.jpg")); // NOI18N
         btnLimpiar.setText(" Limpiar");
         btnLimpiar.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), null));
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -203,6 +225,9 @@ public class CargarDatos extends javax.swing.JFrame {
         btnGuardar.setIcon(new javax.swing.ImageIcon("D:\\CURSO\\Peluqueria_Canina\\guardar.jpg")); // NOI18N
         btnGuardar.setText("   Guardar");
         btnGuardar.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), null));
+        btnGuardar.setMaximumSize(new java.awt.Dimension(134, 59));
+        btnGuardar.setMinimumSize(new java.awt.Dimension(134, 59));
+        btnGuardar.setPreferredSize(new java.awt.Dimension(134, 59));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -225,17 +250,18 @@ public class CargarDatos extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addGap(14, 14, 14)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(16, 16, 16)))
-                .addContainerGap())
+                        .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -253,6 +279,18 @@ public class CargarDatos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+       
+        txtNombre.setText("");
+        txtRaza.setText("");
+        txtColor.setText("");
+        txtNombreDuenio.setText("");
+        txtObservaciones.setText("");
+        cmbAEspecial.setSelectedIndex(0);
+        cmbAlergico.setSelectedIndex(0);
+        
+    }//GEN-LAST:event_btnLimpiarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
