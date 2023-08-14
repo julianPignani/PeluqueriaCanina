@@ -15,9 +15,9 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnVerDatos = new javax.swing.JButton();
+        btnCargarDatos = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -28,20 +28,28 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(204, 255, 204));
 
-        jButton1.setBackground(new java.awt.Color(51, 0, 204));
-        jButton1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jButton1.setText("Ver Datos");
-        jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        btnVerDatos.setBackground(new java.awt.Color(51, 0, 204));
+        btnVerDatos.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        btnVerDatos.setForeground(new java.awt.Color(0, 0, 0));
+        btnVerDatos.setText("Ver Datos");
+        btnVerDatos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 0, 0), null, null));
 
-        jButton2.setBackground(new java.awt.Color(0, 153, 0));
-        jButton2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jButton2.setText("Cargar Datos");
-        jButton2.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        btnCargarDatos.setBackground(new java.awt.Color(0, 153, 0));
+        btnCargarDatos.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        btnCargarDatos.setForeground(new java.awt.Color(0, 0, 0));
+        btnCargarDatos.setText("Cargar Datos");
+        btnCargarDatos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 0, 0), null, null));
+        btnCargarDatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCargarDatosActionPerformed(evt);
+            }
+        });
 
-        jButton3.setBackground(new java.awt.Color(255, 51, 51));
-        jButton3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jButton3.setText("Salir");
-        jButton3.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        btnSalir.setBackground(new java.awt.Color(255, 51, 51));
+        btnSalir.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        btnSalir.setForeground(new java.awt.Color(0, 0, 0));
+        btnSalir.setText("Salir");
+        btnSalir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 0, 0), null, null));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -50,19 +58,19 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(65, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCargarDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnVerDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(61, 61, 61))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnCargarDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnVerDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
@@ -139,11 +147,20 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //Metodo que nos lleva a la pantalla cargar datos
+    private void btnCargarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCargarDatosActionPerformed
+        
+       CargarDatos pantalla = new CargarDatos();//Instanciamos la clase
+       pantalla.setVisible(true); //hacemos la pantalla visible
+       pantalla.setLocationRelativeTo(null);//centramos la ventana
+        
+    }//GEN-LAST:event_btnCargarDatosActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btnCargarDatos;
+    private javax.swing.JButton btnSalir;
+    private javax.swing.JButton btnVerDatos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
