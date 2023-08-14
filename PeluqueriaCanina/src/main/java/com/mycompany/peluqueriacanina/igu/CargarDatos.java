@@ -1,9 +1,13 @@
 
 package com.mycompany.peluqueriacanina.igu;
 
+import com.mycompany.peluqueriacanina.logica.Controladora;
+
 
 public class CargarDatos extends javax.swing.JFrame {
 
+    //instanciamos la logica para que la interfaz la pueda llamar
+    Controladora control = new Controladora();
     
     public CargarDatos() {
         initComponents();
@@ -228,6 +232,11 @@ public class CargarDatos extends javax.swing.JFrame {
         btnGuardar.setMaximumSize(new java.awt.Dimension(134, 59));
         btnGuardar.setMinimumSize(new java.awt.Dimension(134, 59));
         btnGuardar.setPreferredSize(new java.awt.Dimension(134, 59));
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -286,11 +295,28 @@ public class CargarDatos extends javax.swing.JFrame {
         txtRaza.setText("");
         txtColor.setText("");
         txtNombreDuenio.setText("");
+        txtCelDuenio.setText("");
         txtObservaciones.setText("");
         cmbAEspecial.setSelectedIndex(0);
         cmbAlergico.setSelectedIndex(0);
         
     }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        
+        String nombreMascota = txtNombre.getText();
+        String raza = txtRaza.getText();
+        String color = txtColor.getText();
+        String observaciones = txtObservaciones.getText();
+        String alergico = (String) cmbAEspecial.getSelectedItem();
+        String atenEsp = (String) cmbAEspecial.getSelectedItem();
+       
+        String nombreDuenio = txtNombreDuenio.getText();
+        String celDuenio = txtCelDuenio.getText();
+        
+        control.guardar(nombreMascota,raza,color,observaciones,alergico,atenEsp,nombreDuenio,celDuenio);
+        
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
