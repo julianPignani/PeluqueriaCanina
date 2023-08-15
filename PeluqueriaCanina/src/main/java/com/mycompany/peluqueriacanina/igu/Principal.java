@@ -24,15 +24,16 @@ public class Principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
-
-        jPanel3.setBackground(new java.awt.Color(204, 255, 204));
-
         btnVerDatos.setBackground(new java.awt.Color(51, 0, 204));
         btnVerDatos.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         btnVerDatos.setForeground(new java.awt.Color(0, 0, 0));
         btnVerDatos.setText("Ver Datos");
         btnVerDatos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 0, 0), null, null));
+        btnVerDatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerDatosActionPerformed(evt);
+            }
+        });
 
         btnCargarDatos.setBackground(new java.awt.Color(0, 153, 0));
         btnCargarDatos.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -77,9 +78,9 @@ public class Principal extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon("D:\\CURSO\\Peluqueria_Canina\\images1.jpg")); // NOI18N
         jLabel1.setText("jLabel1");
 
-        jLabel2.setBackground(new java.awt.Color(153, 0, 0));
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("PMingLiU-ExtB", 3, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("PELUQUERIA CANINA");
         jLabel2.setBorder(javax.swing.BorderFactory.createCompoundBorder(null, javax.swing.BorderFactory.createCompoundBorder()));
 
@@ -155,6 +156,13 @@ public class Principal extends javax.swing.JFrame {
        pantalla.setLocationRelativeTo(null);//centramos la ventana
         
     }//GEN-LAST:event_btnCargarDatosActionPerformed
+
+    private void btnVerDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerDatosActionPerformed
+        
+       VerDatos pantalla = new VerDatos();//Instanciamos la clase
+       pantalla.setVisible(true); //hacemos la pantalla visible
+       pantalla.setLocationRelativeTo(null);//centramos la ventana
+    }//GEN-LAST:event_btnVerDatosActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
